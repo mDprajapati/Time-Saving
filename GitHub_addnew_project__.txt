@@ -1,0 +1,7 @@
+1) rd .git /S/Q
+2) git init
+3) git add .
+4) git commit -m "commint title"
+5) ---copy your repo's link---- (ex:https://github.com/mDprajapati/react-router.git)
+6) git remote add origin https://github.com/mDprajapati/react-router.git
+7) git push -u origin master
