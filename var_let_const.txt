@@ -1,0 +1,3 @@
+var : var variables can be re-declared and updated
+let : let can be updated but not re-declared.
+const : const cannot be updated or re-declared

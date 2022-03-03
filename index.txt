@@ -1,0 +1,31 @@
+:1)state & props
+:2)const vs var vs let,closures
+:3)functional components life-cycle
+5)class-components life-cycle
+:6)HOC (Higher Order Components)
+:7)redux 
+8)redux thunk(middleware)
+9)code optimization techniques(usememo(),usecallback())
+
+
+
+:1)Javascript & ES6
+:2)React basics
+  -Pros & State
+  -life-cycle (class-components)
+  -List & Key
+3)React Advance
+  -HOC
+  -Functional Component
+  -Hooks (:useState,:useEffect,:useContext,:useReducer,:useCallback,useMemo,"customHook")
+  -Redux
+  -Flux Architecture
+  -Redux Middleware(thunk or saga)
+  -React testing tools (jest,Enzyme)
+  -monorepo & microfronend
+  
+  
+----------------------------------------------------------
+npm install axios redux react-redux redux-thunk --save
+
+npm install @reduxjs/toolkit react-redux

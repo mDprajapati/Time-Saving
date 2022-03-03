@@ -1,0 +1,1 @@
+const data = Object.assign({}, response.data.map(x=>x.member_full_name));

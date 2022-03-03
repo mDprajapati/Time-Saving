@@ -1,0 +1,21 @@
+import React from 'react'
+
+const Common = (params) => {
+debugger
+  return (
+    <div>
+    {params.name}
+    {params.email}
+    </div>
+  )
+}
+
+const CallBackFunc = (callBack) => {
+  const obj = {
+    name:"malav",
+    email:"malav@gmail.com"
+  }
+  callBack(obj);
+}
+
+export default CallBackFunc(Common)

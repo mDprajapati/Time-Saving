@@ -1,0 +1,21 @@
+const arr = [7,'c1','d2',18,'dr',21,2];
+
+    let numbersOnly = (val) => {
+      if (typeof(val) === 'string') {         //change 'string' to 'number' to get numbers output    
+        return val;
+      }
+    }
+
+    let numbers = arr.filter(numbersOnly);
+    console.log(numbers);
+
+
+------------------------------------------------------------------------------------------
+
+shortcut
+
+const arr = [7,'c1','d2',18,'dr',21,2];
+
+arr.filter(x=>typeof(x) === 'string');
+or
+arr.filter(x=>typeof(x) === 'number');
