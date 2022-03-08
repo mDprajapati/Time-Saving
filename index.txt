@@ -10,6 +10,12 @@
 
 
 :1)Javascript & ES6
+  -const vs var vs let
+  -difference between == & ===
+  -closures
+  -difference between regular function & arrow function
+  -Promise (.then(), .catch())
+  -Spread operator & Rest Operator
 :2)React basics
   -Pros & State
   -life-cycle (class-components)
