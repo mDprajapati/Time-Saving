@@ -17,6 +17,9 @@
   -:difference between regular function & arrow function (can't use 'this' in arrow function)
   -:Promise (.then(), .catch())
   -:Spread operator(access all the value inside of array/obj ex : const array = [1,2,3,4,5]; const access = [...array])
+  -:Difference between setTimeout() & setInteral()
+	-setTimeout() triggers the task only once.
+	-setInteral()    "     	"	"	every time unless you tell to stop (for store use : clearInterval())
 :2)React basics
   -Pros & State
   -life-cycle (class-components)
