@@ -25,6 +25,10 @@
   -HOC
   -Functional Component
   -Hooks (:useState,:useEffect,:useContext,:useReducer,:useCallback,useMemo,"customHook")
+  -:Difference between UseCallback & useMemo 
+	    -They both are code optimization technique,
+	    -useCallback remember the whole function that we pass,
+	    -useMemo it remember the returned value from function that we call
   -Redux
   -Flux Architecture
   -Redux Middleware(thunk or saga)
