@@ -10,12 +10,13 @@
 
 
 :1)Javascript & ES6
-  -const vs var vs let
-  -difference between == & ===
-  -closures
-  -difference between regular function & arrow function
-  -Promise (.then(), .catch())
-  -Spread operator & Rest Operator
+  -:const vs var vs let
+  -:difference between == & ===
+  -:closures
+  -:Hoisting
+  -:difference between regular function & arrow function (can't use 'this' in arrow function)
+  -:Promise (.then(), .catch())
+  -:Spread operator(access all the value inside of array/obj ex : const array = [1,2,3,4,5]; const access = [...array])
 :2)React basics
   -Pros & State
   -life-cycle (class-components)
