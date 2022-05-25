@@ -19,3 +19,13 @@ const arr = [7,'c1','d2',18,'dr',21,2];
 arr.filter(x=>typeof(x) === 'string');
 or
 arr.filter(x=>typeof(x) === 'number');
+
+
+
+---------------------------------------------------------------------------------------
+shortcut 3
+let a = ['44','56']
+
+a.map(x=>x.value).toString().split(',').map(Number)
+
+result : [44,56]
