@@ -14,3 +14,12 @@ const names = ['John', 'Paul', 'George', 'Ringo', 'John'];
 
 let unique = [...new Set(names)];
 console.log(unique);
+
+
+merge 2 array with index element
+----------------------------------------------------------------
+var array1 = [1, 2, 3, 4];
+var array2 = ["a", "b", "c", "d"];
+
+var newArray = array1.map((e, i) => e + array2[i]);
+console.log(newArray);
