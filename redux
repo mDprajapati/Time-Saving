@@ -1,0 +1,105 @@
+store simple data in redux store
+------------------------------------------------------
+
+1) Action Method:
+export const setValueData = (value) => ({
+    type: ActionType.SET_VALUE,
+    payload: value,
+});
+
+/* thunk middleware api call */
+export const saveCompanyOverview = (data) => async (dispatch) => {
+      
+       const response = await axios.post(baseURL + `saveCompanyHeader`,data);
+       
+       if (response.data.status == "fail") {
+            
+            dispatch({
+                type: UserDashboardActionTypes.POST_COMPANY_OVERVIEW,
+                payload: null
+            })
+        }
+        else {
+            
+            dispatch({
+                type: UserDashboardActionTypes.POST_COMPANY_OVERVIEW,
+                payload: response.data
+            })
+        }
+}
+
+2) Action type:
+export const ActionType = {
+    SET_VALUE: 'SET_VALUE',
+    POST_COMPANY_OVERVIEW:'POST_COMPANY_OVERVIEW'
+}
+
+/**first create root reducer**/
+const rootReducer = combineReducers({
+      myreducer: myreducer,
+})
+export default rootReducer;
+
+/**after that store reducername into our store.js**/
+const middlewares = [thunk]; //thunk middleware
+
+const store = createStore(
+      rootReducer, //reducername
+      compose(
+            applyMiddleware(...middlewares),
+            window.devToolsExtension ? window.devToolsExtension() : f => f
+      )
+)
+
+export default store;
+
+3) Reducer:
+const INITIAL_STATE = {
+    value: null,
+    apiCall:[] 
+}
+
+const myreducer = (state = INITIAL_STATE, action) => {
+    switch (action.type) {
+        case ActionType.SET_VALUE:
+            return {
+                ...state,
+                value: action.payload,
+            }
+            case ActionType.SET_VALUE:
+            return {
+                ...state,
+                apiCall: action.payload,
+            }
+        default:
+            return state;
+    }
+}
+
+4) Selector
+export const getValue = state => state.myreducer.value;
+export const apiResponse = state => state.myreducer.apiCall;
+
+
+-----------------------------------------------------------------------------------------
+
+/* call dispatch */
+
+const dispatch = useDispatch();
+
+let data = "hello store!"
+dispatch(setValueData(data))
+
+let obj = {
+  id:1,
+  name:"malav",
+  age:25
+}
+dispatch(saveCompanyOverview(obj))
+
+-----------------------------------------------------------------------------------------
+
+/* call reducer */
+
+const getValueInfo = useSelector(getValue)
+const getAPIres = useSelector(apiResponse)
