@@ -1,4 +1,4 @@
-remove duplicate value from object
+1)remove duplicate value from object
 ---------------------------------------------------------------------
 
 const arr = [{id: 1, name: 'one'}, {id: 2, name: 'two'}, {id: 1, name: 'one'}]
@@ -8,15 +8,22 @@ const filtered = arr.filter(({id}, index) => !ids.includes(id, index + 1))
 
 console.log(filtered)
 
-remove duplicate value from array
+2)remove duplicate value from array
 ----------------------------------------------------------------
 const names = ['John', 'Paul', 'George', 'Ringo', 'John'];
 
 let unique = [...new Set(names)];
 console.log(unique);
 
+3)get duplicate value from array
+----------------------------------------------------------------
+const arr = [ 5, 3, 4, 2, 3, 7, 5, 6 ];
 
-merge 2 array with index element
+const findDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) !== index)
+const duplicates = findDuplicates(arr);
+console.log(duplicates); //[3,5]
+
+4)merge 2 array with index element
 ----------------------------------------------------------------
 var array1 = [1, 2, 3, 4];
 var array2 = ["a", "b", "c", "d"];
