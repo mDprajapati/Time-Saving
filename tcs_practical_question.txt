@@ -1,0 +1,7 @@
+let number = '987654321'
+let result = [...new Set(number.split(''))]
+console.log(result)              // ['9', '8', '7', '6', '5', '4', '3', '2', '1']
+let aa = result.map(x=>x).toString().split(',').map(Number)
+console.log(aa)                 //[9, 8, 7, 6, 5, 4, 3, 2, 1]
+let aaa = aa.reduce((a, b) => a + b, 0);
+console.log(aaa)                // 45
