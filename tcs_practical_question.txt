@@ -5,3 +5,7 @@ let aa = result.map(x=>x).toString().split(',').map(Number)
 console.log(aa)                 //[9, 8, 7, 6, 5, 4, 3, 2, 1]
 let aaa = aa.reduce((a, b) => a + b, 0);
 console.log(aaa)                // 45
+---------------------------------------OR-----------------------------------------
+let a = "435464"
+let b = a.split("").map(Number).reduce((a, b) => a + b, 0);
+console.log(b)
