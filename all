@@ -30,3 +30,9 @@ var array2 = ["a", "b", "c", "d"];
 
 var newArray = array1.map((e, i) => e + array2[i]);
 console.log(newArray);
+
+5)Get Index with Value from Array
+const data = ['a','b','c','d']
+for(const [i,v] of data.entries()){
+    console.log(`${i}: ${v}`);
+}
