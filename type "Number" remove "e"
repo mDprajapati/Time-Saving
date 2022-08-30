@@ -1,0 +1,2 @@
+ const exceptThisSymbols = ["e", "E", "+", "-", "."];
+ onKeyDown={e => exceptThisSymbols.includes(e.key) && e.preventDefault()}
