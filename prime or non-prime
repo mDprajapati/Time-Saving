@@ -29,13 +29,10 @@ export default function App() {
 
   if (result === "YES") {
     text = `${value} is a prime number`;
-    classValue = "success panel";
   } else if (result === "NO") {
     text = `${value} is not a prime number`;
-    classValue="error panel";
   } else if (result === "ERROR") {
     text = `${value} is not a number`;
-    classValue="error panel";
   }
 
   return (
