@@ -1,0 +1,20 @@
+const a = [
+  {
+    id:1,
+    fname:"Malav",
+    lname:"Prajapati",
+    email:"mdpra@gmail.com",
+    age:"25"
+  },
+  {
+    id:2,
+    fname:"Malav2",
+    lname:"Prajapati2",
+    email:"mdpra@gmail2.com",
+    age:"26"
+  },
+]
+const uniqueKeys = new Set(a.flatMap(obj => Object.keys(obj)));
+for (const key of uniqueKeys) {
+  console.log(key);
+}
